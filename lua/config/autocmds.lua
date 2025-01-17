@@ -1,0 +1,11 @@
+-- vim.api.nvim_create_autocmd("VimEnter", {
+-- 	buffer = 0,
+-- 	callback = function()
+-- 		local set = vim.opt
+-- 		set.tabstop = 3
+-- 		set.shiftwidth = 3
+-- 		set.softtabstop = 3
+-- 		set.expandtab = true
+-- 		set.autoindent = true
+-- 	end,
+-- })

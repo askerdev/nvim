@@ -1,9 +1,10 @@
+vim.g.editorconfig = false
+
 local set = vim.opt
 
-set.tabstop = 2
-set.shiftwidth = 2
-set.softtabstop = 2
-set.expandtab = true
+set.tabstop = 8
+set.shiftwidth = 3
+set.softtabstop = 3
 set.autoindent = true
 
 set.wrap = false
