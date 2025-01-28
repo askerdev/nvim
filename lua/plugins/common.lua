@@ -40,7 +40,19 @@ return {
 			pairs = {},
 			statusline = {},
 			sessions = {},
+			files = {
+				windows = {
+					max_number = 1,
+				},
+			},
 		},
+		keys = function()
+			local files = require("mini.files")
+			-- stylua: ignore
+			return {
+				{	"<leader>e", mode = "n", function()	files.open(vim.fn.expand("%:p")) end, desc = "File tree" },
+			}
+		end,
 		config = function(_, opts)
 			for plugin, options in pairs(opts) do
 				require("mini." .. plugin).setup(options)

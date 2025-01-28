@@ -30,6 +30,12 @@ return {
 				opts.desc = "Show LSP definitions"
 				km.set("n", "gd", t.lsp_definitions, opts)
 
+				opts.desc = "Show LSP definitions in separated Window"
+				km.set("n", "<C-w>gd", function()
+					vim.api.nvim_command("vsplit")
+					t.lsp_definitions()
+				end, opts)
+
 				opts.desc = "Show LSP implementations"
 				km.set("n", "gi", t.lsp_implementations, opts)
 
