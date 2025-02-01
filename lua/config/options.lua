@@ -1,3 +1,4 @@
+vim.opt.guicursor = ""
 vim.g.editorconfig = false
 
 local set = vim.opt

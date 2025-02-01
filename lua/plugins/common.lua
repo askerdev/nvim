@@ -1,5 +1,5 @@
 return {
-	{ "stevearc/dressing.nvim", opts = {} },
+	-- { "stevearc/dressing.nvim", opts = {} },
 	{
 		"folke/snacks.nvim",
 		priority = 1000,
@@ -13,24 +13,24 @@ return {
 			statuscolumn = { enabled = true },
 		},
 	},
-	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		---@module 'noice'
-		---@class NoiceConfig
-		opts = {
-			messages = {
-				enabled = false,
-			},
-			presets = {
-				lsp_doc_border = true,
-			},
-		},
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
-		},
-	},
+	-- {
+	-- 	"folke/noice.nvim",
+	-- 	event = "VeryLazy",
+	-- 	---@module 'noice'
+	-- 	---@class NoiceConfig
+	-- 	opts = {
+	-- 		messages = {
+	-- 			enabled = false,
+	-- 		},
+	-- 		presets = {
+	-- 			lsp_doc_border = true,
+	-- 		},
+	-- 	},
+	-- 	dependencies = {
+	-- 		"MunifTanjim/nui.nvim",
+	-- 		"rcarriga/nvim-notify",
+	-- 	},
+	-- },
 	{
 		"echasnovski/mini.nvim",
 		opts = {
