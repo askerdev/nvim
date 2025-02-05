@@ -9,6 +9,7 @@ function M.arc_log(ctx)
 		"log",
 		"--format={commit} {title} ({date_rfc})",
 		"--color=never",
+		"-n34",
 		ctx.item.branch,
 	}
 	local row = 0

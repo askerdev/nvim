@@ -19,7 +19,7 @@
   "nvim-treesitter": { "branch": "master", "commit": "9e0b5e7f0d148963d6ec71c48cec1a3f8607d619" },
   "nvim-ts-autotag": { "branch": "main", "commit": "1cca23c9da708047922d3895a71032bc0449c52d" },
   "plenary.nvim": { "branch": "master", "commit": "3707cdb1e43f5cea73afb6037e6494e7ce847a66" },
-  "snacks.nvim": { "branch": "main", "commit": "c61114fb32910863a543a4a7a1f63e9915983d26" },
+  "snacks.nvim": { "branch": "main", "commit": "398c2cb7ff0e94d9d50dbf83632b324d557d141d" },
   "tokyonight.nvim": { "branch": "main", "commit": "dca4adba7dc5f09302a00b0e76078d54d82d2658" },
   "which-key.nvim": { "branch": "main", "commit": "0e76a87ac51772569aec678dc74baa8e2a86100c" }
 }

@@ -34,6 +34,7 @@ return {
 		{ "<leader>fr", function() Snacks.picker.recent() end, desc = "Recent" },
 		-- arc
 		{ "<leader>gb", function() Arc.picker.branches() end, desc = "Git Branches" },
+		{ "<leader>gp", function() Arc.picker.pr_list() end, desc = "Git Branches" },
 		-- git
 		-- { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
 		{ "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git Log" },

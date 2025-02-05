@@ -11,7 +11,7 @@ M.branches = {
 	title = "Branches",
 	finder = "branches",
 	format = "git_branch",
-	preview = require("custom.arc.picker.preview").arc_log,
+	preview = "arc_log",
 	confirm = "arc_checkout",
 	on_show = function(picker)
 		for i, item in ipairs(picker:items()) do
@@ -22,6 +22,15 @@ M.branches = {
 			end
 		end
 	end,
+}
+
+--- @type snacks.picker.Config
+M.pr_list = {
+	title = "Pull Requests",
+	finder = "pr_list",
+	format = "arc_pr",
+	preview = "arc_log",
+	confirm = "arc_view",
 }
 
 return M
