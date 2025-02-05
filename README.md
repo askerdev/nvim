@@ -1,4 +1,4 @@
-## Neovim config for web development
+## My config for web development
 
 ## Installation
 
