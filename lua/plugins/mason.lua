@@ -38,8 +38,6 @@ return {
 				"eslint_d",
 				"golines",
 				"goimports",
-				"delve",
-				"js-debug-adapter",
 			},
 		})
 	end,

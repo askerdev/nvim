@@ -3,8 +3,7 @@ return {
 	lazy = false,
 	priority = 1000,
 	opts = {},
-	config = function(_, opts)
-		require("tokyonight").setup(opts)
+	config = function()
 		vim.cmd.colorscheme("tokyonight-night")
 	end,
 }
