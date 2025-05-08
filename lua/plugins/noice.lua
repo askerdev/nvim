@@ -1,25 +1,22 @@
 return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
+	---@module 'noice'
 	opts = {
 		lsp = {
-			override = {
-				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-				["vim.lsp.util.stylize_markdown"] = true,
-				["cmp.entry.get_documentation"] = true,
-			},
-		},
-		routes = {
-			{
-				filter = {
-					event = "msg_show",
-					any = {
-						{ find = "%d+L, %d+B" },
-						{ find = "; after #%d+" },
-						{ find = "; before #%d+" },
-					},
+			hover = {
+				---@type NoiceViewOptions
+				opts = {
+					position = { row = 2, col = 1 },
+					border = "rounded",
 				},
-				view = "mini",
+			},
+			documentation = {
+				---@type NoiceViewOptions
+				opts = {
+					position = { row = 2, col = 1 },
+					border = "rounded",
+				},
 			},
 		},
 		presets = {

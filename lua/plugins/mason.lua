@@ -1,48 +1,27 @@
 return {
 	"williamboman/mason.nvim",
-	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
-	},
 	opts = {
-		lsp = { "vtsls", "html", "cssls", "lua_ls" },
-		linter = { "eslint_d" },
-		formatter = { "prettier", "stylua" },
+		ensure_installed = {
+			"vtsls",
+			"black",
+			"css-lsp",
+			"eslint_d",
+			"html-lsp",
+			"lua-language-server",
+			"prettier",
+			"pylint",
+			"python-lsp-server",
+			"stylua",
+		},
 	},
 	config = function(_, opts)
-		local mason = require("mason")
-
-		local mason_lspconfig = require("mason-lspconfig")
-
-		local mason_tool_installer = require("mason-tool-installer")
-
-		mason.setup({
-			ui = {
-				icons = {
-					package_installed = "✓",
-					package_pending = "➜",
-					package_uninstalled = "✗",
-				},
-			},
-		})
-
-		mason_lspconfig.setup({
-			automatic_enable = false,
-			ensure_installed = opts.lsp,
-		})
-
-		local tools = {}
-
-		for _, val in ipairs(opts.linter) do
-			table.insert(tools, val)
+		require("mason").setup()
+		local r = require("mason-registry")
+		for _, package_name in ipairs(opts.ensure_installed) do
+			local package = r.get_package(package_name)
+			if not package:is_installed() then
+				package:install()
+			end
 		end
-
-		for _, val in ipairs(opts.formatter) do
-			table.insert(tools, val)
-		end
-
-		mason_tool_installer.setup({
-			ensure_installed = tools,
-		})
 	end,
 }
